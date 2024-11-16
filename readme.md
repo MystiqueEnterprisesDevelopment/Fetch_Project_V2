@@ -1,6 +1,6 @@
 ### Steps to Run the App
 
-1. clone repo : `git clone `
+1. clone repo : `git clone https://github.com/MystiqueEnterprisesDevelopment/Fetch_Project.git`
 
 2. fetch/update package dependencies ~ the only dependency used is Kingfisher for the async/cached image requirement
 
