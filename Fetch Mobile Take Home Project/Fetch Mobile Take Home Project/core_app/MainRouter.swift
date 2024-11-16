@@ -27,7 +27,7 @@ class MainRouter {
     
     DispatchManager.executeOnMainThread {
       let feed = self.factory.makeRecipeFeedViewController(feed: feed, withRouter: self)
-      navigationController.setViewControllers([feed], animated: true)
+      navigationController.setViewControllers([feed], animated: false)
     }
   }
   

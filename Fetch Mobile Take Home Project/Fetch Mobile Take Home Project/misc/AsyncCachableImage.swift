@@ -6,6 +6,10 @@ struct AsyncCachableImage: View {
   
   var body: some View {
     KFImage(url)
+      .placeholder({
+        Image(systemName: "hourglass.circle")
+          .resizable()
+      })
     .resizable()
     .scaledToFit()
     .aspectRatio(contentMode: .fit)

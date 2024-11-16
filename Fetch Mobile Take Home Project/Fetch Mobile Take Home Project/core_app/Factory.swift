@@ -35,6 +35,5 @@ class Factory {
     vc.title = itemVM.name
     return vc
   }
-  
 
 }

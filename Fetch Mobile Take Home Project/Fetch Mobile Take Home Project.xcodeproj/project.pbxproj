@@ -13,8 +13,6 @@
 		D875A1FC2CE80FAF00942848 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A1FA2CE80FAF00942848 /* ErrorView.swift */; };
 		D875A1FE2CE8100200942848 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A1FD2CE8100200942848 /* LoadingViewModel.swift */; };
 		D875A1FF2CE8100200942848 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A1FD2CE8100200942848 /* LoadingViewModel.swift */; };
-		D875A2012CE813A700942848 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A2002CE813A700942848 /* VideoPlayer.swift */; };
-		D875A2022CE813A700942848 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A2002CE813A700942848 /* VideoPlayer.swift */; };
 		D875A20B2CE825FF00942848 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D875A20A2CE825FF00942848 /* Kingfisher */; };
 		D875A20D2CE8262C00942848 /* AsyncCachableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A20C2CE8262C00942848 /* AsyncCachableImage.swift */; };
 		D875A20E2CE8262C00942848 /* AsyncCachableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A20C2CE8262C00942848 /* AsyncCachableImage.swift */; };
@@ -53,6 +51,13 @@
 		D8B5968B2CE7F25800C90735 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596892CE7F25800C90735 /* RecipeDetailView.swift */; };
 		D8B5968D2CE7FBAF00C90735 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5968C2CE7FBAF00C90735 /* Theme.swift */; };
 		D8B5968E2CE7FBAF00C90735 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5968C2CE7FBAF00C90735 /* Theme.swift */; };
+		D8CAA1122CE8E46B00E7971C /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA1112CE8E46A00E7971C /* RecipeDetailViewModel.swift */; };
+		D8CAA1142CE8E59200E7971C /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA1132CE8E59200E7971C /* RecipeRepository.swift */; };
+		D8CAA1162CE8E5B800E7971C /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA1152CE8E5B800E7971C /* RequestProvider.swift */; };
+		D8CAA1182CE8E62C00E7971C /* RequestProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA1172CE8E62C00E7971C /* RequestProviderTest.swift */; };
+		D8CAA1192CE8E70500E7971C /* RecipeDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA1112CE8E46A00E7971C /* RecipeDetailViewModel.swift */; };
+		D8CAA11A2CE8E70900E7971C /* RecipeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA1132CE8E59200E7971C /* RecipeRepository.swift */; };
+		D8CAA11B2CE8E70C00E7971C /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CAA1152CE8E5B800E7971C /* RequestProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +74,6 @@
 		D875A1F72CE80EF800942848 /* DTOAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOAdapter.swift; sourceTree = "<group>"; };
 		D875A1FA2CE80FAF00942848 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		D875A1FD2CE8100200942848 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
-		D875A2002CE813A700942848 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
 		D875A20C2CE8262C00942848 /* AsyncCachableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCachableImage.swift; sourceTree = "<group>"; };
 		D875A20F2CE826B500942848 /* DTOAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOAdapterTests.swift; sourceTree = "<group>"; };
 		D875A2112CE8309500942848 /* InteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
@@ -97,6 +101,10 @@
 		D8B596862CE7F23D00C90735 /* RecipeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemView.swift; sourceTree = "<group>"; };
 		D8B596892CE7F25800C90735 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		D8B5968C2CE7FBAF00C90735 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		D8CAA1112CE8E46A00E7971C /* RecipeDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewModel.swift; sourceTree = "<group>"; };
+		D8CAA1132CE8E59200E7971C /* RecipeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRepository.swift; sourceTree = "<group>"; };
+		D8CAA1152CE8E5B800E7971C /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
+		D8CAA1172CE8E62C00E7971C /* RequestProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProviderTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +133,8 @@
 				D875A1F72CE80EF800942848 /* DTOAdapter.swift */,
 				D8B596732CE7CD3400C90735 /* Interactor.swift */,
 				D8B596762CE7E18D00C90735 /* DomainModel.swift */,
+				D8CAA1132CE8E59200E7971C /* RecipeRepository.swift */,
+				D8CAA1152CE8E5B800E7971C /* RequestProvider.swift */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -133,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				D8B596892CE7F25800C90735 /* RecipeDetailView.swift */,
+				D8CAA1112CE8E46A00E7971C /* RecipeDetailViewModel.swift */,
 			);
 			path = recipe_detail;
 			sourceTree = "<group>";
@@ -170,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				D875A1FA2CE80FAF00942848 /* ErrorView.swift */,
-				D875A2002CE813A700942848 /* VideoPlayer.swift */,
 				D875A20C2CE8262C00942848 /* AsyncCachableImage.swift */,
 			);
 			path = misc;
@@ -222,6 +232,7 @@
 				D875A2152CE8367500942848 /* RecipeFeedViewModelTests.swift */,
 				D875A2172CE8380100942848 /* LoadingViewModelTests.swift */,
 				D875A2192CE83C2A00942848 /* RepositoryTests.swift */,
+				D8CAA1172CE8E62C00E7971C /* RequestProviderTest.swift */,
 			);
 			path = "Fetch Mobile Take Home ProjectTests";
 			sourceTree = "<group>";
@@ -344,18 +355,20 @@
 				D8B596772CE7E18D00C90735 /* DomainModel.swift in Sources */,
 				D8B5967D2CE7F02700C90735 /* RecipeFeedViewModel.swift in Sources */,
 				D8B5968A2CE7F25800C90735 /* RecipeDetailView.swift in Sources */,
+				D8CAA1162CE8E5B800E7971C /* RequestProvider.swift in Sources */,
 				D8B596742CE7CD3400C90735 /* Interactor.swift in Sources */,
 				D8B596382CE7BFF800C90735 /* AppDelegate.swift in Sources */,
 				D875A1FB2CE80FAF00942848 /* ErrorView.swift in Sources */,
 				D8B596842CE7F0AB00C90735 /* Factory.swift in Sources */,
 				D8B596872CE7F23D00C90735 /* RecipeItemView.swift in Sources */,
-				D875A2012CE813A700942848 /* VideoPlayer.swift in Sources */,
 				D8B5966E2CE7C23300C90735 /* DTO.swift in Sources */,
+				D8CAA1142CE8E59200E7971C /* RecipeRepository.swift in Sources */,
 				D875A1FE2CE8100200942848 /* LoadingViewModel.swift in Sources */,
 				D8B5966B2CE7C0B500C90735 /* MainRouter.swift in Sources */,
 				D8B596712CE7CCD200C90735 /* LoadingView.swift in Sources */,
 				D8B596812CE7F08200C90735 /* DispatchManager.swift in Sources */,
 				D875A20D2CE8262C00942848 /* AsyncCachableImage.swift in Sources */,
+				D8CAA1122CE8E46B00E7971C /* RecipeDetailViewModel.swift in Sources */,
 				D8B596682CE7C09300C90735 /* RecipeFeedView.swift in Sources */,
 				D8B5967A2CE7F01000C90735 /* RecipeItemViewModel.swift in Sources */,
 				D8B5968D2CE7FBAF00C90735 /* Theme.swift in Sources */,
@@ -367,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8CAA1182CE8E62C00E7971C /* RequestProviderTest.swift in Sources */,
 				D8B596782CE7E18D00C90735 /* DomainModel.swift in Sources */,
 				D8B5967E2CE7F02700C90735 /* RecipeFeedViewModel.swift in Sources */,
 				D875A2122CE8309500942848 /* InteractorTests.swift in Sources */,
@@ -379,16 +393,18 @@
 				D8B596882CE7F23D00C90735 /* RecipeItemView.swift in Sources */,
 				D875A2182CE8380100942848 /* LoadingViewModelTests.swift in Sources */,
 				D875A21A2CE83C2A00942848 /* RepositoryTests.swift in Sources */,
-				D875A2022CE813A700942848 /* VideoPlayer.swift in Sources */,
 				D8B596692CE7C09300C90735 /* RecipeFeedView.swift in Sources */,
 				D875A2162CE8367500942848 /* RecipeFeedViewModelTests.swift in Sources */,
+				D8CAA11B2CE8E70C00E7971C /* RequestProvider.swift in Sources */,
 				D875A1FF2CE8100200942848 /* LoadingViewModel.swift in Sources */,
 				D8B596722CE7CCD200C90735 /* LoadingView.swift in Sources */,
 				D8B596822CE7F08200C90735 /* DispatchManager.swift in Sources */,
+				D8CAA1192CE8E70500E7971C /* RecipeDetailViewModel.swift in Sources */,
 				D875A20E2CE8262C00942848 /* AsyncCachableImage.swift in Sources */,
 				D8B5966C2CE7C0B500C90735 /* MainRouter.swift in Sources */,
 				D8B5967B2CE7F01000C90735 /* RecipeItemViewModel.swift in Sources */,
 				D8B5968E2CE7FBAF00C90735 /* Theme.swift in Sources */,
+				D8CAA11A2CE8E70900E7971C /* RecipeRepository.swift in Sources */,
 				D875A1F92CE80EF800942848 /* DTOAdapter.swift in Sources */,
 				D875A2102CE826B500942848 /* DTOAdapterTests.swift in Sources */,
 			);
