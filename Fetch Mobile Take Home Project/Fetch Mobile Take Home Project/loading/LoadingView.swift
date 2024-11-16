@@ -42,6 +42,8 @@ struct LoadingView: View {
         .foregroundStyle(.white)
         .shadow(radius: 5.0)
     )
+    .clipShape(RoundedRectangle(cornerRadius: 8))
+    .shadow(radius: 5.0)
   }
 }
 
