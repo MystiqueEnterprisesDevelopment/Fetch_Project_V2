@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D875A1F82CE80EF800942848 /* DTOAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A1F72CE80EF800942848 /* DTOAdapter.swift */; };
+		D875A1F92CE80EF800942848 /* DTOAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A1F72CE80EF800942848 /* DTOAdapter.swift */; };
+		D875A1FB2CE80FAF00942848 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A1FA2CE80FAF00942848 /* ErrorView.swift */; };
+		D875A1FC2CE80FAF00942848 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A1FA2CE80FAF00942848 /* ErrorView.swift */; };
+		D875A1FE2CE8100200942848 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A1FD2CE8100200942848 /* LoadingViewModel.swift */; };
+		D875A1FF2CE8100200942848 /* LoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A1FD2CE8100200942848 /* LoadingViewModel.swift */; };
+		D875A2012CE813A700942848 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A2002CE813A700942848 /* VideoPlayer.swift */; };
+		D875A2022CE813A700942848 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A2002CE813A700942848 /* VideoPlayer.swift */; };
+		D875A20B2CE825FF00942848 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D875A20A2CE825FF00942848 /* Kingfisher */; };
+		D875A20D2CE8262C00942848 /* AsyncCachableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A20C2CE8262C00942848 /* AsyncCachableImage.swift */; };
+		D875A20E2CE8262C00942848 /* AsyncCachableImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A20C2CE8262C00942848 /* AsyncCachableImage.swift */; };
+		D875A2102CE826B500942848 /* DTOAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A20F2CE826B500942848 /* DTOAdapterTests.swift */; };
+		D875A2122CE8309500942848 /* InteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A2112CE8309500942848 /* InteractorTests.swift */; };
+		D875A2142CE8366300942848 /* RecipeItemViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A2132CE8366300942848 /* RecipeItemViewModelTests.swift */; };
+		D875A2162CE8367500942848 /* RecipeFeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A2152CE8367500942848 /* RecipeFeedViewModelTests.swift */; };
+		D875A2182CE8380100942848 /* LoadingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A2172CE8380100942848 /* LoadingViewModelTests.swift */; };
+		D875A21A2CE83C2A00942848 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D875A2192CE83C2A00942848 /* RepositoryTests.swift */; };
+		D8B596382CE7BFF800C90735 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596372CE7BFF800C90735 /* AppDelegate.swift */; };
+		D8B596412CE7BFFB00C90735 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8B596402CE7BFFB00C90735 /* Assets.xcassets */; };
+		D8B596442CE7BFFB00C90735 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8B596422CE7BFFB00C90735 /* LaunchScreen.storyboard */; };
+		D8B596682CE7C09300C90735 /* RecipeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596672CE7C09300C90735 /* RecipeFeedView.swift */; };
+		D8B596692CE7C09300C90735 /* RecipeFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596672CE7C09300C90735 /* RecipeFeedView.swift */; };
+		D8B5966B2CE7C0B500C90735 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5966A2CE7C0B500C90735 /* MainRouter.swift */; };
+		D8B5966C2CE7C0B500C90735 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5966A2CE7C0B500C90735 /* MainRouter.swift */; };
+		D8B5966E2CE7C23300C90735 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5966D2CE7C23300C90735 /* DTO.swift */; };
+		D8B5966F2CE7C23300C90735 /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5966D2CE7C23300C90735 /* DTO.swift */; };
+		D8B596712CE7CCD200C90735 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596702CE7CCD200C90735 /* LoadingView.swift */; };
+		D8B596722CE7CCD200C90735 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596702CE7CCD200C90735 /* LoadingView.swift */; };
+		D8B596742CE7CD3400C90735 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596732CE7CD3400C90735 /* Interactor.swift */; };
+		D8B596752CE7CD3400C90735 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596732CE7CD3400C90735 /* Interactor.swift */; };
+		D8B596772CE7E18D00C90735 /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596762CE7E18D00C90735 /* DomainModel.swift */; };
+		D8B596782CE7E18D00C90735 /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596762CE7E18D00C90735 /* DomainModel.swift */; };
+		D8B5967A2CE7F01000C90735 /* RecipeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596792CE7F01000C90735 /* RecipeItemViewModel.swift */; };
+		D8B5967B2CE7F01000C90735 /* RecipeItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596792CE7F01000C90735 /* RecipeItemViewModel.swift */; };
+		D8B5967D2CE7F02700C90735 /* RecipeFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5967C2CE7F02700C90735 /* RecipeFeedViewModel.swift */; };
+		D8B5967E2CE7F02700C90735 /* RecipeFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5967C2CE7F02700C90735 /* RecipeFeedViewModel.swift */; };
+		D8B596812CE7F08200C90735 /* DispatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596802CE7F08200C90735 /* DispatchManager.swift */; };
+		D8B596822CE7F08200C90735 /* DispatchManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596802CE7F08200C90735 /* DispatchManager.swift */; };
+		D8B596842CE7F0AB00C90735 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596832CE7F0AB00C90735 /* Factory.swift */; };
+		D8B596852CE7F0AB00C90735 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596832CE7F0AB00C90735 /* Factory.swift */; };
+		D8B596872CE7F23D00C90735 /* RecipeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596862CE7F23D00C90735 /* RecipeItemView.swift */; };
+		D8B596882CE7F23D00C90735 /* RecipeItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596862CE7F23D00C90735 /* RecipeItemView.swift */; };
+		D8B5968A2CE7F25800C90735 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596892CE7F25800C90735 /* RecipeDetailView.swift */; };
+		D8B5968B2CE7F25800C90735 /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B596892CE7F25800C90735 /* RecipeDetailView.swift */; };
+		D8B5968D2CE7FBAF00C90735 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5968C2CE7FBAF00C90735 /* Theme.swift */; };
+		D8B5968E2CE7FBAF00C90735 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B5968C2CE7FBAF00C90735 /* Theme.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D8B5964B2CE7BFFC00C90735 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D8B5962C2CE7BFF800C90735 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8B596332CE7BFF800C90735;
+			remoteInfo = "Fetch Mobile Take Home Project";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D875A1F72CE80EF800942848 /* DTOAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOAdapter.swift; sourceTree = "<group>"; };
+		D875A1FA2CE80FAF00942848 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D875A1FD2CE8100200942848 /* LoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModel.swift; sourceTree = "<group>"; };
+		D875A2002CE813A700942848 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
+		D875A20C2CE8262C00942848 /* AsyncCachableImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncCachableImage.swift; sourceTree = "<group>"; };
+		D875A20F2CE826B500942848 /* DTOAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTOAdapterTests.swift; sourceTree = "<group>"; };
+		D875A2112CE8309500942848 /* InteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorTests.swift; sourceTree = "<group>"; };
+		D875A2132CE8366300942848 /* RecipeItemViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemViewModelTests.swift; sourceTree = "<group>"; };
+		D875A2152CE8367500942848 /* RecipeFeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeedViewModelTests.swift; sourceTree = "<group>"; };
+		D875A2172CE8380100942848 /* LoadingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewModelTests.swift; sourceTree = "<group>"; };
+		D875A2192CE83C2A00942848 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		D875A21B2CE83FDC00942848 /* Fetch Mobile Take Home Project.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Fetch Mobile Take Home Project.xctestplan"; sourceTree = "<group>"; };
+		D8B596342CE7BFF800C90735 /* Fetch Mobile Take Home Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fetch Mobile Take Home Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B596372CE7BFF800C90735 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D8B596402CE7BFFB00C90735 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D8B596432CE7BFFB00C90735 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D8B596452CE7BFFB00C90735 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8B5964A2CE7BFFB00C90735 /* Fetch Mobile Take Home ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fetch Mobile Take Home ProjectTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B596672CE7C09300C90735 /* RecipeFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeedView.swift; sourceTree = "<group>"; };
+		D8B5966A2CE7C0B500C90735 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		D8B5966D2CE7C23300C90735 /* DTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTO.swift; sourceTree = "<group>"; };
+		D8B596702CE7CCD200C90735 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		D8B596732CE7CD3400C90735 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		D8B596762CE7E18D00C90735 /* DomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModel.swift; sourceTree = "<group>"; };
+		D8B596792CE7F01000C90735 /* RecipeItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemViewModel.swift; sourceTree = "<group>"; };
+		D8B5967C2CE7F02700C90735 /* RecipeFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeFeedViewModel.swift; sourceTree = "<group>"; };
+		D8B596802CE7F08200C90735 /* DispatchManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchManager.swift; sourceTree = "<group>"; };
+		D8B596832CE7F0AB00C90735 /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		D8B596862CE7F23D00C90735 /* RecipeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeItemView.swift; sourceTree = "<group>"; };
+		D8B596892CE7F25800C90735 /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
+		D8B5968C2CE7FBAF00C90735 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D8B596312CE7BFF800C90735 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D875A20B2CE825FF00942848 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8B596472CE7BFFB00C90735 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D875A2032CE81D9000942848 /* domain */ = {
+			isa = PBXGroup;
+			children = (
+				D8B5966D2CE7C23300C90735 /* DTO.swift */,
+				D875A1F72CE80EF800942848 /* DTOAdapter.swift */,
+				D8B596732CE7CD3400C90735 /* Interactor.swift */,
+				D8B596762CE7E18D00C90735 /* DomainModel.swift */,
+			);
+			path = domain;
+			sourceTree = "<group>";
+		};
+		D875A2042CE81DAB00942848 /* recipe_detail */ = {
+			isa = PBXGroup;
+			children = (
+				D8B596892CE7F25800C90735 /* RecipeDetailView.swift */,
+			);
+			path = recipe_detail;
+			sourceTree = "<group>";
+		};
+		D875A2052CE81DCB00942848 /* recipe_feed */ = {
+			isa = PBXGroup;
+			children = (
+				D8B596862CE7F23D00C90735 /* RecipeItemView.swift */,
+				D8B596672CE7C09300C90735 /* RecipeFeedView.swift */,
+				D8B596792CE7F01000C90735 /* RecipeItemViewModel.swift */,
+				D8B5967C2CE7F02700C90735 /* RecipeFeedViewModel.swift */,
+			);
+			path = recipe_feed;
+			sourceTree = "<group>";
+		};
+		D875A2062CE81DE400942848 /* core_app */ = {
+			isa = PBXGroup;
+			children = (
+				D8B5966A2CE7C0B500C90735 /* MainRouter.swift */,
+				D8B596832CE7F0AB00C90735 /* Factory.swift */,
+			);
+			path = core_app;
+			sourceTree = "<group>";
+		};
+		D875A2072CE81DFD00942848 /* loading */ = {
+			isa = PBXGroup;
+			children = (
+				D8B596702CE7CCD200C90735 /* LoadingView.swift */,
+				D875A1FD2CE8100200942848 /* LoadingViewModel.swift */,
+			);
+			path = loading;
+			sourceTree = "<group>";
+		};
+		D875A2082CE81E6000942848 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				D875A1FA2CE80FAF00942848 /* ErrorView.swift */,
+				D875A2002CE813A700942848 /* VideoPlayer.swift */,
+				D875A20C2CE8262C00942848 /* AsyncCachableImage.swift */,
+			);
+			path = misc;
+			sourceTree = "<group>";
+		};
+		D8B5962B2CE7BFF800C90735 = {
+			isa = PBXGroup;
+			children = (
+				D875A21B2CE83FDC00942848 /* Fetch Mobile Take Home Project.xctestplan */,
+				D8B596362CE7BFF800C90735 /* Fetch Mobile Take Home Project */,
+				D8B5964D2CE7BFFC00C90735 /* Fetch Mobile Take Home ProjectTests */,
+				D8B596352CE7BFF800C90735 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D8B596352CE7BFF800C90735 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D8B596342CE7BFF800C90735 /* Fetch Mobile Take Home Project.app */,
+				D8B5964A2CE7BFFB00C90735 /* Fetch Mobile Take Home ProjectTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D8B596362CE7BFF800C90735 /* Fetch Mobile Take Home Project */ = {
+			isa = PBXGroup;
+			children = (
+				D875A2082CE81E6000942848 /* misc */,
+				D875A2072CE81DFD00942848 /* loading */,
+				D875A2062CE81DE400942848 /* core_app */,
+				D875A2052CE81DCB00942848 /* recipe_feed */,
+				D875A2042CE81DAB00942848 /* recipe_detail */,
+				D875A2032CE81D9000942848 /* domain */,
+				D8B5967F2CE7F06A00C90735 /* adapted_from_personal_projects */,
+				D8B596372CE7BFF800C90735 /* AppDelegate.swift */,
+				D8B596402CE7BFFB00C90735 /* Assets.xcassets */,
+				D8B596422CE7BFFB00C90735 /* LaunchScreen.storyboard */,
+				D8B596452CE7BFFB00C90735 /* Info.plist */,
+			);
+			path = "Fetch Mobile Take Home Project";
+			sourceTree = "<group>";
+		};
+		D8B5964D2CE7BFFC00C90735 /* Fetch Mobile Take Home ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				D875A20F2CE826B500942848 /* DTOAdapterTests.swift */,
+				D875A2112CE8309500942848 /* InteractorTests.swift */,
+				D875A2132CE8366300942848 /* RecipeItemViewModelTests.swift */,
+				D875A2152CE8367500942848 /* RecipeFeedViewModelTests.swift */,
+				D875A2172CE8380100942848 /* LoadingViewModelTests.swift */,
+				D875A2192CE83C2A00942848 /* RepositoryTests.swift */,
+			);
+			path = "Fetch Mobile Take Home ProjectTests";
+			sourceTree = "<group>";
+		};
+		D8B5967F2CE7F06A00C90735 /* adapted_from_personal_projects */ = {
+			isa = PBXGroup;
+			children = (
+				D8B596802CE7F08200C90735 /* DispatchManager.swift */,
+				D8B5968C2CE7FBAF00C90735 /* Theme.swift */,
+			);
+			path = adapted_from_personal_projects;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D8B596332CE7BFF800C90735 /* Fetch Mobile Take Home Project */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8B5965E2CE7BFFC00C90735 /* Build configuration list for PBXNativeTarget "Fetch Mobile Take Home Project" */;
+			buildPhases = (
+				D8B596302CE7BFF800C90735 /* Sources */,
+				D8B596312CE7BFF800C90735 /* Frameworks */,
+				D8B596322CE7BFF800C90735 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fetch Mobile Take Home Project";
+			packageProductDependencies = (
+				D875A20A2CE825FF00942848 /* Kingfisher */,
+			);
+			productName = "Fetch Mobile Take Home Project";
+			productReference = D8B596342CE7BFF800C90735 /* Fetch Mobile Take Home Project.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D8B596492CE7BFFB00C90735 /* Fetch Mobile Take Home ProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8B596612CE7BFFC00C90735 /* Build configuration list for PBXNativeTarget "Fetch Mobile Take Home ProjectTests" */;
+			buildPhases = (
+				D8B596462CE7BFFB00C90735 /* Sources */,
+				D8B596472CE7BFFB00C90735 /* Frameworks */,
+				D8B596482CE7BFFB00C90735 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D8B5964C2CE7BFFC00C90735 /* PBXTargetDependency */,
+			);
+			name = "Fetch Mobile Take Home ProjectTests";
+			productName = "Fetch Mobile Take Home ProjectTests";
+			productReference = D8B5964A2CE7BFFB00C90735 /* Fetch Mobile Take Home ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D8B5962C2CE7BFF800C90735 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					D8B596332CE7BFF800C90735 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					D8B596492CE7BFFB00C90735 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = D8B596332CE7BFF800C90735;
+					};
+				};
+			};
+			buildConfigurationList = D8B5962F2CE7BFF800C90735 /* Build configuration list for PBXProject "Fetch Mobile Take Home Project" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D8B5962B2CE7BFF800C90735;
+			packageReferences = (
+				D875A2092CE825FF00942848 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = D8B596352CE7BFF800C90735 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D8B596332CE7BFF800C90735 /* Fetch Mobile Take Home Project */,
+				D8B596492CE7BFFB00C90735 /* Fetch Mobile Take Home ProjectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D8B596322CE7BFF800C90735 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8B596442CE7BFFB00C90735 /* LaunchScreen.storyboard in Resources */,
+				D8B596412CE7BFFB00C90735 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8B596482CE7BFFB00C90735 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8B596302CE7BFF800C90735 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8B596772CE7E18D00C90735 /* DomainModel.swift in Sources */,
+				D8B5967D2CE7F02700C90735 /* RecipeFeedViewModel.swift in Sources */,
+				D8B5968A2CE7F25800C90735 /* RecipeDetailView.swift in Sources */,
+				D8B596742CE7CD3400C90735 /* Interactor.swift in Sources */,
+				D8B596382CE7BFF800C90735 /* AppDelegate.swift in Sources */,
+				D875A1FB2CE80FAF00942848 /* ErrorView.swift in Sources */,
+				D8B596842CE7F0AB00C90735 /* Factory.swift in Sources */,
+				D8B596872CE7F23D00C90735 /* RecipeItemView.swift in Sources */,
+				D875A2012CE813A700942848 /* VideoPlayer.swift in Sources */,
+				D8B5966E2CE7C23300C90735 /* DTO.swift in Sources */,
+				D875A1FE2CE8100200942848 /* LoadingViewModel.swift in Sources */,
+				D8B5966B2CE7C0B500C90735 /* MainRouter.swift in Sources */,
+				D8B596712CE7CCD200C90735 /* LoadingView.swift in Sources */,
+				D8B596812CE7F08200C90735 /* DispatchManager.swift in Sources */,
+				D875A20D2CE8262C00942848 /* AsyncCachableImage.swift in Sources */,
+				D8B596682CE7C09300C90735 /* RecipeFeedView.swift in Sources */,
+				D8B5967A2CE7F01000C90735 /* RecipeItemViewModel.swift in Sources */,
+				D8B5968D2CE7FBAF00C90735 /* Theme.swift in Sources */,
+				D875A1F82CE80EF800942848 /* DTOAdapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8B596462CE7BFFB00C90735 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8B596782CE7E18D00C90735 /* DomainModel.swift in Sources */,
+				D8B5967E2CE7F02700C90735 /* RecipeFeedViewModel.swift in Sources */,
+				D875A2122CE8309500942848 /* InteractorTests.swift in Sources */,
+				D875A2142CE8366300942848 /* RecipeItemViewModelTests.swift in Sources */,
+				D8B5968B2CE7F25800C90735 /* RecipeDetailView.swift in Sources */,
+				D8B596752CE7CD3400C90735 /* Interactor.swift in Sources */,
+				D8B5966F2CE7C23300C90735 /* DTO.swift in Sources */,
+				D875A1FC2CE80FAF00942848 /* ErrorView.swift in Sources */,
+				D8B596852CE7F0AB00C90735 /* Factory.swift in Sources */,
+				D8B596882CE7F23D00C90735 /* RecipeItemView.swift in Sources */,
+				D875A2182CE8380100942848 /* LoadingViewModelTests.swift in Sources */,
+				D875A21A2CE83C2A00942848 /* RepositoryTests.swift in Sources */,
+				D875A2022CE813A700942848 /* VideoPlayer.swift in Sources */,
+				D8B596692CE7C09300C90735 /* RecipeFeedView.swift in Sources */,
+				D875A2162CE8367500942848 /* RecipeFeedViewModelTests.swift in Sources */,
+				D875A1FF2CE8100200942848 /* LoadingViewModel.swift in Sources */,
+				D8B596722CE7CCD200C90735 /* LoadingView.swift in Sources */,
+				D8B596822CE7F08200C90735 /* DispatchManager.swift in Sources */,
+				D875A20E2CE8262C00942848 /* AsyncCachableImage.swift in Sources */,
+				D8B5966C2CE7C0B500C90735 /* MainRouter.swift in Sources */,
+				D8B5967B2CE7F01000C90735 /* RecipeItemViewModel.swift in Sources */,
+				D8B5968E2CE7FBAF00C90735 /* Theme.swift in Sources */,
+				D875A1F92CE80EF800942848 /* DTOAdapter.swift in Sources */,
+				D875A2102CE826B500942848 /* DTOAdapterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D8B5964C2CE7BFFC00C90735 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D8B596332CE7BFF800C90735 /* Fetch Mobile Take Home Project */;
+			targetProxy = D8B5964B2CE7BFFC00C90735 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D8B596422CE7BFFB00C90735 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8B596432CE7BFFB00C90735 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D8B5965C2CE7BFFC00C90735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D8B5965D2CE7BFFC00C90735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D8B5965F2CE7BFFC00C90735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M5L593V9PD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fetch Mobile Take Home Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Fetch;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MystiqueEnterprises.Fetch-Mobile-Take-Home-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8B596602CE7BFFC00C90735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M5L593V9PD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Fetch Mobile Take Home Project/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Fetch;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MystiqueEnterprises.Fetch-Mobile-Take-Home-Project";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D8B596622CE7BFFC00C90735 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M5L593V9PD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MystiqueEnterprises.Fetch-Mobile-Take-Home-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fetch Mobile Take Home Project.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fetch Mobile Take Home Project";
+			};
+			name = Debug;
+		};
+		D8B596632CE7BFFC00C90735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = M5L593V9PD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MystiqueEnterprises.Fetch-Mobile-Take-Home-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fetch Mobile Take Home Project.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Fetch Mobile Take Home Project";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D8B5962F2CE7BFF800C90735 /* Build configuration list for PBXProject "Fetch Mobile Take Home Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8B5965C2CE7BFFC00C90735 /* Debug */,
+				D8B5965D2CE7BFFC00C90735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8B5965E2CE7BFFC00C90735 /* Build configuration list for PBXNativeTarget "Fetch Mobile Take Home Project" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8B5965F2CE7BFFC00C90735 /* Debug */,
+				D8B596602CE7BFFC00C90735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8B596612CE7BFFC00C90735 /* Build configuration list for PBXNativeTarget "Fetch Mobile Take Home ProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8B596622CE7BFFC00C90735 /* Debug */,
+				D8B596632CE7BFFC00C90735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D875A2092CE825FF00942848 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D875A20A2CE825FF00942848 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D875A2092CE825FF00942848 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D8B5962C2CE7BFF800C90735 /* Project object */;
+}

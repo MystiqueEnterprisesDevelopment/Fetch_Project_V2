@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "9A86D33A-4C17-4D69-8E0E-C86F62062B55",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Fetch Mobile Take Home Project.xcodeproj",
+      "identifier" : "D8B596332CE7BFF800C90735",
+      "name" : "Fetch Mobile Take Home Project"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Fetch Mobile Take Home Project.xcodeproj",
+        "identifier" : "D8B596492CE7BFFB00C90735",
+        "name" : "Fetch Mobile Take Home ProjectTests"
+      }
+    }
+  ],
+  "version" : 1
+}
