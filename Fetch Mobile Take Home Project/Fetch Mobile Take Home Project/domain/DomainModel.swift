@@ -1,6 +1,6 @@
 import Foundation
 
-class RecipeFeed {
+struct RecipeFeed {
   var recipes: [RecipeItem] = []
   
   init(recipes: [RecipeItem]) {

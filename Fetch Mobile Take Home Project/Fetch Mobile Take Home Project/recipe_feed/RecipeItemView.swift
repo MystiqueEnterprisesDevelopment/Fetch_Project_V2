@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RecipeItemView: View {
-  @ObservedObject var viewModel: RecipeItemViewModel
+  @StateObject var viewModel: RecipeItemViewModel
   
   var seeMoreAction: ((RecipeItemViewModel) -> ())?
   

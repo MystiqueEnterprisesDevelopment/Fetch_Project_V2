@@ -4,7 +4,7 @@ protocol IRecipeRepository {
   func fetchRecipes() async throws -> RecipeFeedDTO?
 }
 
-class RecipeRepository: IRecipeRepository {
+struct RecipeRepository: IRecipeRepository {
   private let requestProvider: IRequestProvider
   
   init(requestProvider: IRequestProvider) {

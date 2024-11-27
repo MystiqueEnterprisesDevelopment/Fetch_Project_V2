@@ -4,7 +4,7 @@ protocol IRequestProvider {
   func provideRecipeFeedRequest() -> URLRequest?
 }
 
-class RequestProvider: IRequestProvider {
+struct RequestProvider: IRequestProvider {
   func provideRecipeFeedRequest() -> URLRequest? {
     let urlStr = "https://d3jbb8n5wk0qxi.cloudfront.net/recipes.json"
     

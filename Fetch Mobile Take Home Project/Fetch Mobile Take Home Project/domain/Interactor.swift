@@ -4,7 +4,7 @@ protocol IRecipeInteractor {
   func loadRecipes() async throws -> RecipeFeed
 }
 
-class RecipeInteractor: IRecipeInteractor {
+struct RecipeInteractor: IRecipeInteractor {
   private let repository: IRecipeRepository
   
   init(repository: IRecipeRepository) {

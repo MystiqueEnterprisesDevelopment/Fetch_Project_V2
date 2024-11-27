@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct RecipeFeedView: View {
-  @ObservedObject var viewModel: RecipeFeedViewModel
+  @StateObject var viewModel: RecipeFeedViewModel
   
   var body: some View {
     mainContent()
