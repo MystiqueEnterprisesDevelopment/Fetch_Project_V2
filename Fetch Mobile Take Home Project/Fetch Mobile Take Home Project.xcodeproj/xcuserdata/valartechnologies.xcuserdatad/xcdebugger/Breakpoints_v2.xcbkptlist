@@ -726,8 +726,8 @@
             filePath = "Fetch Mobile Take Home Project/recipe_feed/RecipeFeedViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "reloadRecipes()"
             landmarkType = "7">
             <Locations>
@@ -774,8 +774,8 @@
             filePath = "Fetch Mobile Take Home Project/recipe_feed/RecipeFeedViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "updateRecipes(recipes:)"
             landmarkType = "7">
             <Locations>
@@ -822,8 +822,8 @@
             filePath = "Fetch Mobile Take Home Project/recipe_feed/RecipeFeedViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "updateRecipes(recipes:)"
             landmarkType = "7">
             <Locations>

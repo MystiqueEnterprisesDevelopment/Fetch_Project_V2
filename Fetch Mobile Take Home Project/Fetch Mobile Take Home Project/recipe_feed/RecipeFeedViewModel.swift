@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 class RecipeFeedViewModel: ObservableObject {
   @Published var recipes: [RecipeItemViewModel] = []
   @Published var isLoading: Bool = false
@@ -7,7 +8,12 @@ class RecipeFeedViewModel: ObservableObject {
   private let interactor: IRecipeInteractor
   private var router: MainRouter?
   
-  var hasRecipes: Bool {
+//  var hasRecipes: Bool {
+//    return !recipes.isEmpty
+//  }
+  
+  
+  func hasRecipes() -> Bool {
     return !recipes.isEmpty
   }
   
@@ -19,10 +25,10 @@ class RecipeFeedViewModel: ObservableObject {
     self.router = router
   }
   
-  func reloadRecipes() {
+  func reloadRecipes() async {
     updateState(isLoading: true)
     
-    Task {
+    //Task {
       do {
         let items = try await interactor.loadRecipes()
         self.updateRecipes(recipes: items.recipes)
@@ -31,7 +37,7 @@ class RecipeFeedViewModel: ObservableObject {
         self.updateRecipes(recipes: [])
         updateState(isLoading: false)
       }
-    }
+   // }
   }
   
   private func updateRecipes(recipes: [RecipeItem]) {
