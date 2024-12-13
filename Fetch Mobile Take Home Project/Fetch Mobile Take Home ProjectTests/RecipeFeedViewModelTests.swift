@@ -1,6 +1,7 @@
 import XCTest
 @testable import Fetch_Mobile_Take_Home_Project
 
+@MainActor
 final class RecipeFeedViewModelTests: XCTestCase {
   var subject: RecipeFeedViewModel!
   
@@ -13,7 +14,7 @@ final class RecipeFeedViewModelTests: XCTestCase {
                                          router: nil)
     }
     
-    XCTAssertFalse(subject.hasRecipes)
+    XCTAssertFalse(subject.hasRecipes())
     XCTAssertFalse(subject.isLoading)
   }
   
@@ -26,7 +27,7 @@ final class RecipeFeedViewModelTests: XCTestCase {
                                          router: nil)
     }
         
-    XCTAssertFalse(subject.hasRecipes)
+    XCTAssertFalse(subject.hasRecipes())
     XCTAssertFalse(subject.isLoading)
     
   }
@@ -46,7 +47,7 @@ final class RecipeFeedViewModelTests: XCTestCase {
 
     }
     
-    XCTAssertTrue(subject.hasRecipes)
+    XCTAssertTrue(subject.hasRecipes())
     XCTAssertFalse(subject.isLoading)
     XCTAssertEqual(subject.recipes.count, 2)
   }

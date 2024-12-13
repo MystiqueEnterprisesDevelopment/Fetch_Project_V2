@@ -15,18 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let router = factory.makeMainRouter()
     
     router.startFlow()
+    
     self.router = router
-
     self.window = UIWindow(frame: UIScreen.main.bounds)
     
     guard let window = self.window else {
       return false
     }
     
-    window.rootViewController = router.navigationController
+    window.rootViewController = router.navigation()
     window.makeKeyAndVisible()
-    
-    
+  
     return true
   }
   

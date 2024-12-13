@@ -1,7 +1,12 @@
 import SwiftUI
 
+@MainActor
 class RecipeItemViewModel: ObservableObject, Identifiable {
-  let recipeItem: RecipeItem
+  private let recipeItem: RecipeItem
+  let id: Int
+  
+  @Published var overrideSeeMore: Bool = false
+  @Published var isThumbnailEnabled: Bool = true
   
   var name: String {
     return recipeItem.name
@@ -10,11 +15,7 @@ class RecipeItemViewModel: ObservableObject, Identifiable {
   var cuisineType: String {
     return recipeItem.cuisine
   }
-  
-  var id: Int {
-    return recipeItem.uuid.hashValue
-  }
-  
+    
   var showViewDetail: Bool {
     if recipeItem.largePhotoURL != nil {
       return true
@@ -30,9 +31,6 @@ class RecipeItemViewModel: ObservableObject, Identifiable {
     
     return false
   }
-  
-  @Published var overrideSeeMore: Bool = false
-  @Published var isThumbnailEnabled: Bool = true
 
   var thumbnailImageURL: URL? {
     return recipeItem.smallPhotoURL
@@ -40,6 +38,7 @@ class RecipeItemViewModel: ObservableObject, Identifiable {
   
   init(recipeItem: RecipeItem) {
     self.recipeItem = recipeItem
+    self.id = recipeItem.uuid.hashValue
   }
   
   func disableSeeMore(_ isDisabled: Bool) {
@@ -48,5 +47,9 @@ class RecipeItemViewModel: ObservableObject, Identifiable {
   
   func disableThumbnail(_ isDisabled: Bool) {
     self.isThumbnailEnabled = !isDisabled
+  }
+  
+  func recipe() -> RecipeItem {
+    return recipeItem
   }
 }

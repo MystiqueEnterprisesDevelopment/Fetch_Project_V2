@@ -5,7 +5,7 @@ enum MockError: Error {
   case mock
 }
 
-class MockInteractor: IRecipeInteractor {
+actor MockInteractor: IRecipeInteractor {
   let mock: RecipeFeed?
   
   init(returnMock: RecipeFeed?) {
@@ -22,8 +22,9 @@ class MockInteractor: IRecipeInteractor {
   
 }
 
+@MainActor
 final class LoadingViewModelTests: XCTestCase {
-  var subject: LoadingViewModel!
+  private var subject: LoadingViewModel!
   
   func testEmpty() {
     setUp { _ in
@@ -31,9 +32,14 @@ final class LoadingViewModelTests: XCTestCase {
       self.subject = LoadingViewModel(interactor: mock, router: nil)
     }
     
-    subject.startLoading()
-    XCTAssertFalse(subject.isErrored)
-    XCTAssertFalse(subject.isLoading)
+    Task { [subject] in
+      guard let subject = subject else {
+        return XCTFail("")
+      }
+      await subject.startLoading()
+      XCTAssertFalse(subject.isErrored)
+      XCTAssertFalse(subject.isLoading)
+    }
   }
   
   func testError() {
@@ -42,9 +48,14 @@ final class LoadingViewModelTests: XCTestCase {
       self.subject = LoadingViewModel(interactor: mock, router: nil)
     }
     
-    subject.startLoading()
-    XCTAssertFalse(subject.isErrored)
-    XCTAssertFalse(subject.isLoading)
+    Task { [subject] in
+      guard let subject = subject else {
+        return XCTFail("")
+      }
+      await subject.startLoading()
+      XCTAssertFalse(subject.isErrored)
+      XCTAssertFalse(subject.isLoading)
+    }
   }
   
   func testNotEmpty() {
@@ -56,9 +67,14 @@ final class LoadingViewModelTests: XCTestCase {
       self.subject = LoadingViewModel(interactor: mock, router: nil)
     }
     
-    subject.startLoading()
-    XCTAssertFalse(subject.isErrored)
-    XCTAssertFalse(subject.isLoading)
+    Task { [subject] in
+      guard let subject = subject else {
+        return XCTFail("")
+      }
+      await subject.startLoading()
+      XCTAssertFalse(subject.isErrored)
+      XCTAssertFalse(subject.isLoading)
+    }
   }
   
 }

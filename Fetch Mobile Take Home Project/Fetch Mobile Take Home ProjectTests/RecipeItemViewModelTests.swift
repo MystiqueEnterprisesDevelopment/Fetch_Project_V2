@@ -1,7 +1,7 @@
 import XCTest
 @testable import Fetch_Mobile_Take_Home_Project
 
-
+@MainActor
 final class RecipeItemViewModelTests: XCTestCase {
   var subject: RecipeItemViewModel!
   
