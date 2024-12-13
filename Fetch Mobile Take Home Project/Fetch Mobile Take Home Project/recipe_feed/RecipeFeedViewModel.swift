@@ -43,7 +43,12 @@ class RecipeFeedViewModel: ObservableObject {
     self.isLoading = isLoading
   }
   
-  func showRecipeDetail(forRecipe recipe: RecipeItemViewModel) {
+  private func showRecipeDetail(forRecipe recipe: RecipeItemViewModel) {
     router?.routeToRecipeDetail(recipe: recipe.recipe())
   }
+  
+  func recipeItemWasTapped(_ recipe: RecipeItemViewModel) {
+    showRecipeDetail(forRecipe: recipe)
+  }
+  
 }

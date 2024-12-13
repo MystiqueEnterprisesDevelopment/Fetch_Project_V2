@@ -5,7 +5,7 @@ final class LoadingViewModel: ObservableObject {
   private var router: MainRouter?
   private let interactor: IRecipeInteractor
   
-  @Published var isLoading: Bool = false
+  @Published var isLoading: Bool = true
   @Published var isErrored: Bool = false
   
   init(interactor: IRecipeInteractor, router: MainRouter?) {
@@ -26,11 +26,9 @@ final class LoadingViewModel: ObservableObject {
   
   }
   
-  @MainActor
   func updateState(isLoading: Bool, isErrored: Bool) {
     self.isErrored = isErrored
     self.isLoading = isLoading
-    
   }
   
   func retryLoading() async {

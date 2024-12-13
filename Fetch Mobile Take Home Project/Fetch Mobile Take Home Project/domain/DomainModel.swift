@@ -1,6 +1,6 @@
 import Foundation
 
-struct RecipeFeed: Sendable {
+struct RecipeFeed {
   var recipes: [RecipeItem] = []
   
   init(recipes: [RecipeItem]) {
@@ -12,7 +12,7 @@ struct RecipeFeed: Sendable {
   }
 }
 
-struct RecipeItem: Sendable {
+struct RecipeItem {
   var cuisine: String
   var name: String
   var smallPhotoURL: URL?

@@ -43,11 +43,11 @@ struct RecipeFeedView: View {
     List {
       ForEach(viewModel.recipes) { recipe_i in
         RecipeItemView(viewModel: recipe_i, seeMoreAction: { vm in
-          viewModel.showRecipeDetail(forRecipe: vm)
+          viewModel.recipeItemWasTapped(vm)
         })
-          .onTapGesture {
-            viewModel.showRecipeDetail(forRecipe: recipe_i)
-          }
+        .onTapGesture {
+          viewModel.recipeItemWasTapped(recipe_i)
+        }
       }
     }
     .refreshable {
