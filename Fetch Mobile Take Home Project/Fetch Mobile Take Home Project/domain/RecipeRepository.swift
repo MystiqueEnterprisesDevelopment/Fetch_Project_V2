@@ -4,11 +4,20 @@ protocol IRecipeRepository: Actor {
   func fetchRecipes() async throws -> RecipeFeedDTO?
 }
 
+actor HTTPDispatcher {
+  nonisolated
+  func dispatchRequest(_ request: URLRequest) async throws -> (Data, URLResponse) {
+    try await URLSession.shared.data(for: request, delegate: nil)
+  }
+}
+
 actor RecipeRepository: IRecipeRepository {
   private let requestProvider: IRequestProvider
+  private let httpDispatcher: HTTPDispatcher
   
   init(requestProvider: IRequestProvider) {
     self.requestProvider = requestProvider
+    self.httpDispatcher = HTTPDispatcher()
   }
   
   func fetchRecipes() async throws -> RecipeFeedDTO? {
@@ -17,7 +26,7 @@ actor RecipeRepository: IRecipeRepository {
     }
     
     do {
-      let (data, _) = try await URLSession.shared.data(for: request)
+      let (data, _) = try await httpDispatcher.dispatchRequest(request)
       return try decodeResponse(data)
     } catch {
       throw error
@@ -32,13 +41,5 @@ actor RecipeRepository: IRecipeRepository {
       throw error
     }
   }
-  
 
-  
-}
-
-extension URLSession {
-    func data(for urlRequest: URLRequest) async throws -> (Data, URLResponse) {
-        try await URLSession.shared.data(for: urlRequest, delegate: nil)
-    }
 }
