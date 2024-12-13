@@ -1,12 +1,13 @@
 import XCTest
 @testable import Fetch_Mobile_Take_Home_Project
 
-class MockRequestProvider: IRequestProvider {
+final class MockRequestProvider: IRequestProvider, Sendable {
   let url: URL?
   
   init(mockURL: URL?) {
     self.url = mockURL
   }
+  
   func provideRecipeFeedRequest() -> URLRequest? {
     guard let url else {
       return nil
@@ -25,7 +26,11 @@ final class RepositoryTests: XCTestCase {
       self.subject = RecipeRepository(requestProvider: mockProvider)
     }
     
-    Task {
+    Task { [subject] in
+      guard let subject = subject else {
+        return XCTFail("subject should not be nil")
+      }
+      
       do {
        let recipeFeedDto = try await subject.fetchRecipes()
         
@@ -44,7 +49,11 @@ final class RepositoryTests: XCTestCase {
       self.subject = RecipeRepository(requestProvider: mockProvider)
     }
     
-    Task {
+    Task { [subject] in
+      guard let subject = subject else {
+        return XCTFail("subject should not be nil")
+      }
+      
       do {
        let recipeFeedDto = try await subject.fetchRecipes()
         
@@ -63,7 +72,11 @@ final class RepositoryTests: XCTestCase {
       self.subject = RecipeRepository(requestProvider: mockProvider)
     }
     
-    Task {
+    Task { [subject] in
+      guard let subject = subject else {
+        return XCTFail("subject should not be nil")
+      }
+      
       do {
        let recipeFeedDto = try await subject.fetchRecipes()
         

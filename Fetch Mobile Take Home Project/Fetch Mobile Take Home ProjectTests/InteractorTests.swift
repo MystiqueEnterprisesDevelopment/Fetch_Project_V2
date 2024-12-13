@@ -1,7 +1,7 @@
 import XCTest
 @testable import Fetch_Mobile_Take_Home_Project
 
-class MockRepository: IRecipeRepository {
+actor MockRepository: IRecipeRepository {
   var mockedRecipes: RecipeFeedDTO?
   
   init(recipes: RecipeFeedDTO?) {
@@ -14,17 +14,21 @@ class MockRepository: IRecipeRepository {
 }
 
 final class InteractorTests: XCTestCase {
-  var interactor_subject: RecipeInteractor!
+  var subject: RecipeInteractor!
 
   func testEmpty() {
     setUp { err in
       let mock = MockRepository(recipes: RecipeFeedDTO(recipes: []))
-      self.interactor_subject = RecipeInteractor(repository: mock)
+      self.subject = RecipeInteractor(repository: mock)
     }
     
-    Task {
+    Task { [subject] in
+      guard let subject = subject else {
+        return XCTFail("subject should not be nil")
+      }
+      
       do {
-        let feed = try await interactor_subject.loadRecipes()
+        let feed = try await subject.loadRecipes()
         XCTAssertFalse(feed.hasRecipes())
       } catch {
         XCTAssertNil(error)
@@ -36,12 +40,16 @@ final class InteractorTests: XCTestCase {
   func testNil() {
     setUp { err in
       let mock = MockRepository(recipes: nil)
-      self.interactor_subject = RecipeInteractor(repository: mock)
+      self.subject = RecipeInteractor(repository: mock)
     }
     
-    Task {
+    Task { [subject] in
+      guard let subject = subject else {
+        return XCTFail("subject should not be nil")
+      }
+      
       do {
-        let feed = try await interactor_subject.loadRecipes()
+        let feed = try await subject.loadRecipes()
         XCTAssertNil(feed)
       } catch {
         XCTAssertNotNil(error)
@@ -63,12 +71,17 @@ final class InteractorTests: XCTestCase {
       }
       
       let mock = MockRepository(recipes: RecipeFeedDTO(recipes: mockRecipes))
-      self.interactor_subject = RecipeInteractor(repository: mock)
+      self.subject = RecipeInteractor(repository: mock)
     }
     
-    Task {
+    Task { [subject] in
+      
+      guard let subject = subject else {
+        return XCTFail("subject should not be nil")
+      }
+      
       do {
-        let feed = try await interactor_subject.loadRecipes()
+        let feed = try await subject.loadRecipes()
         
         XCTAssertTrue(feed.hasRecipes())
         XCTAssertTrue(feed.recipes.count == 10)

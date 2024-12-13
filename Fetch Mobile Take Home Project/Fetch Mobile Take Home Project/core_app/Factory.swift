@@ -1,6 +1,7 @@
 import SwiftUI
 
-class Factory {
+@MainActor
+final class Factory {
   func makeMainRouter() -> MainRouter {
     let nav = UINavigationController()
     return MainRouter(navigation: nav, factory: self)

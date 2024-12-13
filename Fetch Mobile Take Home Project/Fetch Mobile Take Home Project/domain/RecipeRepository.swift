@@ -1,10 +1,10 @@
 import Foundation
 
-protocol IRecipeRepository {
+protocol IRecipeRepository: Actor {
   func fetchRecipes() async throws -> RecipeFeedDTO?
 }
 
-struct RecipeRepository: IRecipeRepository {
+actor RecipeRepository: IRecipeRepository {
   private let requestProvider: IRequestProvider
   
   init(requestProvider: IRequestProvider) {
@@ -24,7 +24,7 @@ struct RecipeRepository: IRecipeRepository {
     }
   }
   
-  func decodeResponse<T: Codable>(_ data: Data) throws -> T? {
+  private func decodeResponse<T: Codable>(_ data: Data) throws -> T? {
     let decoder = JSONDecoder()
     do {
       return try decoder.decode(T.self, from: data)
@@ -33,4 +33,12 @@ struct RecipeRepository: IRecipeRepository {
     }
   }
   
+
+  
+}
+
+extension URLSession {
+    func data(for urlRequest: URLRequest) async throws -> (Data, URLResponse) {
+        try await URLSession.shared.data(for: urlRequest, delegate: nil)
+    }
 }

@@ -12,7 +12,7 @@ struct RecipeFeed {
   }
 }
 
-class RecipeItem {
+struct RecipeItem {
   var cuisine: String
   var name: String
   var smallPhotoURL: URL?

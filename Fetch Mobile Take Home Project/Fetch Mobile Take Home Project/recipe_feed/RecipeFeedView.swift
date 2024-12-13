@@ -15,7 +15,7 @@ struct RecipeFeedView: View {
   }
   
   @ViewBuilder
-  func bufferingView() -> some View {
+  private func bufferingView() -> some View {
     VStack(alignment: .center, spacing: 16.0, content: {
       ProgressView()
       Text("Loading...")
@@ -30,8 +30,8 @@ struct RecipeFeedView: View {
   }
   
   @ViewBuilder
-  func mainContent() -> some View {
-    if viewModel.hasRecipes {
+  private func mainContent() -> some View {
+    if viewModel.hasRecipes() {
       recipeList()
     } else {
       emptyStateView()
@@ -39,29 +39,35 @@ struct RecipeFeedView: View {
   }
   
   @ViewBuilder
-  func recipeList() -> some View {
+  private func recipeList() -> some View {
     List {
       ForEach(viewModel.recipes) { recipe_i in
         RecipeItemView(viewModel: recipe_i, seeMoreAction: { vm in
-          viewModel.showRecipeDetail(forRecipe: vm)
+          viewModel.recipeItemWasTapped(vm)
         })
-          .onTapGesture {
-            viewModel.showRecipeDetail(forRecipe: recipe_i)
-          }
+        .onTapGesture {
+          viewModel.recipeItemWasTapped(recipe_i)
+        }
       }
     }
     .refreshable {
-      viewModel.reloadRecipes()
+      reloadRecipes()
     }
   }
   
   @ViewBuilder
-  func emptyStateView() -> some View {
+  private func emptyStateView() -> some View {
     ErrorStateView(image: Image(systemName: "carrot.fill"),
                    errorTitle: "Uh oh, there are no recipes available",
                    errorSubtitle: "We might be having some troubles on our end. Please try again in a few seconds. If the problem persists, please reach out to our support team.",
                    ctaTitle: "Try again") {
-      viewModel.reloadRecipes()
+      reloadRecipes()
+    }
+  }
+  
+  private func reloadRecipes() {
+    Task { [viewModel] in
+      await viewModel.reloadRecipes()
     }
   }
 }

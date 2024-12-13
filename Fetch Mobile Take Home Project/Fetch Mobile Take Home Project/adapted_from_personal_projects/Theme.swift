@@ -1,5 +1,7 @@
 import SwiftUI
 
+typealias VoidCompletion = () -> ()
+
 struct Theme {
   static let primaryDarkColor = makeColor(r: 48, g: 13, b: 56)
   

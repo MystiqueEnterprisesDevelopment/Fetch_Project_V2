@@ -29,7 +29,7 @@ struct RecipeDetailView: View {
   }
   
   @ViewBuilder
-  func videoPlayerSection(videoURL: URL) -> some View {
+  private func videoPlayerSection(videoURL: URL) -> some View {
     VStack(alignment: .leading, content: {
       Text("Related video")
         .font(Font.system(size: 18.0, weight: .bold))
@@ -46,7 +46,7 @@ struct RecipeDetailView: View {
   }
   
   @ViewBuilder
-  func LargeRecipeImage(url: URL) -> some View {
+  private func LargeRecipeImage(url: URL) -> some View {
     AsyncCachableImage(url: url)
       .frame(maxWidth: 350, maxHeight: 350)
   }

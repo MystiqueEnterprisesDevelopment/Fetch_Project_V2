@@ -1,5 +1,6 @@
 import SwiftUI
 
+@MainActor
 class RecipeDetailViewModel: ObservableObject {
   @Published var recipeItemViewModel: RecipeItemViewModel
   
@@ -11,7 +12,7 @@ class RecipeDetailViewModel: ObservableObject {
     configureInitialState()
   }
   
-  func configureInitialState() {
+  private func configureInitialState() {
     recipeItemViewModel.disableSeeMore(true)
     
     if largeImageURL() != nil {
@@ -20,15 +21,15 @@ class RecipeDetailViewModel: ObservableObject {
   }
   
   func recipeSourceURL() -> URL? {
-    return recipeItemViewModel.recipeItem.sourceURL
+    return recipeItemViewModel.recipe().sourceURL
   }
   
   func largeImageURL() -> URL? {
-    return recipeItemViewModel.recipeItem.largePhotoURL
+    return recipeItemViewModel.recipe().largePhotoURL
   }
   
   func youtubeURL() -> URL? {
-    return recipeItemViewModel.recipeItem.youtubeURL
+    return recipeItemViewModel.recipe().youtubeURL
   }
   
   func showWebpage(url: URL) {

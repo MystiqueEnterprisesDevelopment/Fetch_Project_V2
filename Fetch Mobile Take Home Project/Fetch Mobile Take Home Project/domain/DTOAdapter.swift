@@ -4,7 +4,7 @@ enum MappingError: Error {
   case domainMappingError
 }
 
-class DTOAdapter {
+struct DTOAdapter {
   func mapToDomainRecipeFeed(dto: RecipeFeedDTO) throws -> RecipeFeed {
     guard let items = dto.recipes else {
       return RecipeFeed(recipes: [])
@@ -61,7 +61,7 @@ class DTOAdapter {
       }
     }
     
-    let item = RecipeItem(cuisine: dto.cuisine, name: dto.name, uuid: dto.uuid)
+    var item = RecipeItem(cuisine: dto.cuisine, name: dto.name, uuid: dto.uuid)
     item.smallPhotoURL = smallPhotoURL
     item.largePhotoURL = largePhotoURL
     item.sourceURL = sourceURL
@@ -69,7 +69,7 @@ class DTOAdapter {
     return item
   }
   
-  func isValidURL(_ url: URL) -> Bool {
+  private func isValidURL(_ url: URL) -> Bool {
     return url.isFileURL || (url.host != nil && url.scheme != nil)
   }
 }

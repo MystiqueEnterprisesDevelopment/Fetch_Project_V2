@@ -6,7 +6,7 @@ struct LoadingView: View {
   var body: some View {
     mainContent()
       .onAppear(perform: {
-        viewModel.startLoading()
+        load()
       })
   }
   
@@ -23,7 +23,7 @@ struct LoadingView: View {
                      errorSubtitle: "We might be having some troubles on our end. Please try again in a few seconds. If the problem persists, please reach out to our support team.",
                      ctaTitle: "Try again",
                      action: {
-        viewModel.retryLoading()
+        retryLoad()
       })
     }
     
@@ -44,6 +44,18 @@ struct LoadingView: View {
     )
     .clipShape(RoundedRectangle(cornerRadius: 8))
     .shadow(radius: 5.0)
+  }
+  
+  private func load() {
+    Task { [viewModel] in
+      await viewModel.startLoading()
+    }
+  }
+  
+  private func retryLoad() {
+    Task { [viewModel] in
+      await  viewModel.retryLoading()
+    }
   }
 }
 

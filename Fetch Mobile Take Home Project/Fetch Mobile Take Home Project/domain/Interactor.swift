@@ -1,10 +1,10 @@
 import Foundation
 
-protocol IRecipeInteractor {
+protocol IRecipeInteractor: Actor {
   func loadRecipes() async throws -> RecipeFeed
 }
 
-struct RecipeInteractor: IRecipeInteractor {
+actor RecipeInteractor: IRecipeInteractor {
   private let repository: IRecipeRepository
   
   init(repository: IRecipeRepository) {
